@@ -1,0 +1,23 @@
+openapi: '3.1.0'
+info:
+  title: Number Trivia
+  version: 1.0.0
+servers:
+  - url: http://number-trivia.com
+paths:
+  /{number}/math:
+    get:
+      operationId: getFact
+      parameters:
+        - name: number
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: A fact about the number.
+          content:
+            text/plain:
+              schema:
+                type: string
