@@ -3,8 +3,5 @@
   "private": true,
   "workspaces": [
     "e2e"
-  ],
-  "scripts": {
-    "test:e2e": "npm run --workspace=e2e test:e2e --"
-  }
+  ]
 }

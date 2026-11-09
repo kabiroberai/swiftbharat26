@@ -60,7 +60,7 @@ jobs:
         E2E_OAUTH_CREDENTIALS: ${{ secrets.E2E_OAUTH_CREDENTIALS }}
       run: |
         npm ci
-        npx e2e run
+        make e2e-run
     - name: Upload e2e artifacts
       if: ${{ !cancelled() }}
       uses: actions/upload-artifact@v7
