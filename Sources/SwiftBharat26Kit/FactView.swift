@@ -11,7 +11,7 @@ struct FactView: View {
 
     var body: some View {
         VStack {
-            Stepper("Number: \(number * 2)", value: $number)
+            Stepper("Number: \(number)", value: $number)
             Button("Get fact") {
                 fact = .loading
                 Task {
