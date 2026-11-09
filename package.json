@@ -1,0 +1,7 @@
+{
+  "name": "swiftbharat26",
+  "private": true,
+  "workspaces": [
+    "e2e"
+  ]
+}
