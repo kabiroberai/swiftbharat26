@@ -37,7 +37,7 @@ internal struct Client: APIProtocol {
             forOperation: Operations.GetFact.id,
             serializer: { input in
                 let path = try converter.renderedPath(
-                    template: "/{}/math",
+                    template: "/{}/physics-fact",
                     parameters: [
                         input.path.number
                     ]
