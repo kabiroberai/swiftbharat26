@@ -53,3 +53,7 @@ struct FactView: View {
         .animation(.default, value: [number, fact] as [AnyHashable])
     }
 }
+
+#Preview {
+    FactView()
+}
