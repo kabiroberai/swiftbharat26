@@ -6,3 +6,7 @@ watch:
 
 generate:
 	swift package plugin --allow-writing-to-package-directory generate-code-from-openapi
+
+snapshots:
+	@rm -rf snapshot-images
+	SIMCTL_CHILD_SNAPSHOTS_EXPORT_DIR="$$PWD/snapshot-images" xtool dev -s
