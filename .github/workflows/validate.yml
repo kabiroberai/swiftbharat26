@@ -26,3 +26,20 @@ jobs:
     - name: Build
       run: |
         xtool dev build --triple arm64-apple-ios-simulator
+    - name: Snapshot tests
+      run: |
+        uuid=$(xcrun simctl create TestSim "iPhone 17 Pro")
+        xcrun simctl bootstatus "${uuid}" -b
+        echo "Installing app..."
+        xcrun simctl install "${uuid}" ./xtool/swiftbharat26.app
+        echo "Capturing snapshots..."
+        SIMCTL_CHILD_SNAPSHOTS_EXPORT_DIR="$PWD/snapshot-images" xcrun simctl \
+          launch --terminate-running-process --console-pty "${uuid}" com.kabiroberai.swiftbharat26
+    - name: Upload results
+      env:
+        SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+        SENTRY_ORG: swiftbharat26-demo
+        SENTRY_PROJECT: swiftbharat26
+      run: |
+        brew install getsentry/tools/sentry-cli
+        sentry-cli snapshots upload ./snapshot-images --app-id swiftbharat26

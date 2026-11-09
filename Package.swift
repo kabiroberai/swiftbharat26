@@ -17,11 +17,15 @@ let package = Package(
         .package(url: "https://github.com/apple/swift-openapi-generator", from: "1.6.0"),
         .package(url: "https://github.com/apple/swift-openapi-runtime", from: "1.7.0"),
         .package(url: "https://github.com/apple/swift-openapi-urlsession", from: "1.0.0"),  
+        .package(url: "https://github.com/kabiroberai/SnapshotPreviews", branch: "render-hooks"),
     ],
     targets: [
         .target(
             name: "SwiftBharat26",
-            dependencies: ["SwiftBharat26Kit"]
+            dependencies: [
+                "SwiftBharat26Kit",
+                .product(name: "SnapshottingTestsCore", package: "SnapshotPreviews"),
+            ]
         ),
         .target(
             name: "SwiftBharat26Kit",
