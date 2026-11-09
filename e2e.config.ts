@@ -18,7 +18,6 @@ export default {
       device: process.env.E2E_DEVICE ?? 'iPhone 17 Pro',
     }),
     app: {
-      bundleId: 'com.kabiroberai.swiftbharat26',
       appPath: './xtool/swiftbharat26.app',
     },
   }],
