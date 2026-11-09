@@ -66,5 +66,5 @@ jobs:
       uses: actions/upload-artifact@v7
       with:
         name: e2e-artifacts
-        path: .e2e/results
+        path: e2e/.e2e/results
         if-no-files-found: ignore

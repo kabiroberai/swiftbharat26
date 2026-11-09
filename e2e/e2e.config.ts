@@ -4,7 +4,6 @@ import { github } from '@e2e-dev/github';
 import { chatgpt } from 'e2e/oauth/chatgpt';
 
 export default {
-  tests: 'Tests/E2E/**/*.e2e.ts',
   reporters: ['list', github()],
   agents: {
     default: {
@@ -18,7 +17,7 @@ export default {
       device: process.env.E2E_DEVICE ?? 'iPhone 17 Pro',
     }),
     app: {
-      appPath: './xtool/swiftbharat26.app',
+      appPath: '../xtool/swiftbharat26.app',
     },
   }],
   workers: 1,
