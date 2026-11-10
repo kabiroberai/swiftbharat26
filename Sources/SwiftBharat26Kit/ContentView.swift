@@ -1,7 +1,12 @@
 import SwiftUI
+import Dependencies
 
 public struct ContentView: View {
-    public init() {}
+    public init() {
+        if FeatureFlags.value(for: "GREETINGS_V2") {
+            prepareDependencies { $0.greetingGenerator = GreetingGeneratorV2() }
+        }
+    }
 
     public var body: some View {
         RootView()
