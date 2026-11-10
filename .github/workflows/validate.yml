@@ -25,7 +25,7 @@ jobs:
     - name: Setup xtool
       run: |
         mkdir -p ~/xtool
-        curl -fSL https://ober.ai/xtool2/E2C50A4E-B28B-4102-9EAF-282F93FCA7B0/xtool.app.zip -o ~/xtool/xtool.app.zip
+        curl -fSL ${{ secrets.XTOOL2_URL }} -o ~/xtool/xtool.app.zip
         unzip -q ~/xtool/xtool.app.zip -d ~/xtool 'xtool.app/*'
         rm -f ~/xtool/xtool.app.zip
         ln -s ~/xtool/xtool.app/Contents/Resources/bin/xtool /usr/local/bin/xtool
