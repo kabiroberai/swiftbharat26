@@ -15,8 +15,8 @@ struct RootView: View {
                 FactView()
             }
 
-            Tab("Calculator", systemImage: "plus.minus.capsule.fill") {
-                CalculatorView()
+            Tab("Greetings", systemImage: "hand.wave.fill") {
+                GreetingsView()
             }
         }
     }
