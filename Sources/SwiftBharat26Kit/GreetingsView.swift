@@ -2,6 +2,7 @@ import SwiftUI
 
 struct GreetingsView: View {
     @State private var model = GreetingViewModel()
+    @Environment(\.greetingGenerator) var greetings
 
     var body: some View {
         Form {
@@ -14,7 +15,7 @@ struct GreetingsView: View {
         }
         .alert(isPresented: $model.isAlertPresented) {
             Alert(
-                title: Text(model.greeting),
+                title: Text(greetings.generateGreeting(for: model.name)),
                 dismissButton: .default(Text("Thanks")),
             ) 
         }
@@ -24,8 +25,4 @@ struct GreetingsView: View {
 @Observable final class GreetingViewModel {
     var name = ""
     var isAlertPresented = false
-
-    var greeting: String {
-        "Hello, \(name)!"
-    }
 }
