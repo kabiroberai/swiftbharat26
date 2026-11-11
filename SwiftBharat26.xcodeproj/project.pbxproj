@@ -13,8 +13,9 @@
 
 /* Begin PBXFileReference section */
 		26769B63CF682570C1EB7A36 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		5617185230A5244100C44BD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4FAB32557C2CA12A4E8C328 /* swiftbharat26 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = swiftbharat26; path = .; sourceTree = SOURCE_ROOT; };
-		C3F219E7975A19F52CFEF5B3 /* SwiftBharat26.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = SwiftBharat26.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3F219E7975A19F52CFEF5B3 /* SwiftBharat26.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftBharat26.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +33,7 @@
 		1DB7DE7141FC11B77C9DF04F /* SwiftBharat26 */ = {
 			isa = PBXGroup;
 			children = (
+				5617185230A5244100C44BD4 /* Info.plist */,
 				26769B63CF682570C1EB7A36 /* App.swift */,
 			);
 			path = SwiftBharat26;
@@ -127,6 +129,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftBharat26/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -144,6 +147,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftBharat26/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
