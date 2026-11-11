@@ -3,9 +3,6 @@ default_platform(:ios)
 ENV["FASTLANE_XCODEBUILD_SETTINGS_TIMEOUT"] = "120"
 
 lane :package do
-  # `sh` runs from ./fastlane, so hop up to the package root
-  sh("cd .. && xtool dev generate-xcode-project")
-
   app_store_connect_api_key(
     is_key_content_base64: true,
   )
@@ -38,7 +35,7 @@ lane :package do
   )
 
   update_code_signing_settings(
-    path: "./xtool/.xtool-tmp/swiftbharat26.xcodeproj",
+    path: "./SwiftBharat26.xcodeproj",
     use_automatic_signing: false,
     team_id: ENV["DEVELOPMENT_TEAM"],
     code_sign_identity: "Apple Distribution",
@@ -46,8 +43,8 @@ lane :package do
   )
 
   gym(
-    workspace: "./xtool/swiftbharat26.xcworkspace",
-    scheme: "swiftbharat26-App",
+    project: "./SwiftBharat26.xcodeproj",
+    scheme: "SwiftBharat26",
     export_method: "ad-hoc",
     output_directory: "./out",
     xcargs: "-skipMacroValidation",

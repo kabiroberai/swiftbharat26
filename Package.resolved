@@ -1,5 +1,5 @@
 {
-  "originHash" : "9c4b54c6111088e4e872e4916cc23e2c4980e57a98d33a21eda2b713eab59c3c",
+  "originHash" : "8788b3196f4cdcf49e97cfa55ecf17ff678893d2920295ffce7acc63f90ab0ff",
   "pins" : [
     {
       "identity" : "combine-schedulers",
@@ -8,15 +8,6 @@
       "state" : {
         "revision" : "114354e8c1667a2edc4993700fb9fa4f90157b56",
         "version" : "1.2.2"
-      }
-    },
-    {
-      "identity" : "flyingfox",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/swhitty/FlyingFox.git",
-      "state" : {
-        "revision" : "f7829d4aca8cbfecb410a1cce872b1b045224aa1",
-        "version" : "0.16.0"
       }
     },
     {
@@ -35,24 +26,6 @@
       "state" : {
         "revision" : "8576f0d579b27020beccbccc3ea6844f3ddfc2c2",
         "version" : "0.14.0"
-      }
-    },
-    {
-      "identity" : "simpledebugger",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/EmergeTools/SimpleDebugger.git",
-      "state" : {
-        "revision" : "f065263eb5db95874b690408d136b573c939db9e",
-        "version" : "1.0.0"
-      }
-    },
-    {
-      "identity" : "snapshotpreviews",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/kabiroberai/SnapshotPreviews",
-      "state" : {
-        "branch" : "render-hooks",
-        "revision" : "f86a5be94ef976a79fd37b0497bfe09eb3e6e0c2"
       }
     },
     {
