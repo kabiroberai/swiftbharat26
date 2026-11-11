@@ -63,3 +63,37 @@ jobs:
         name: e2e-artifacts
         path: e2e/.e2e/results
         if-no-files-found: ignore
+  preview:
+    runs-on: xcode-27
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+    - uses: actions/checkout@v7
+    - uses: ruby/setup-ruby@v1
+      with:
+        bundler-cache: true
+    - uses: ./.github/actions/setup-xtool
+      with:
+        url: ${{ secrets.XTOOL2_URL }}
+    - name: Package
+      env:
+        APP_STORE_CONNECT_API_KEY_KEY_ID: ${{ secrets.APP_STORE_CONNECT_API_KEY_KEY_ID }}
+        APP_STORE_CONNECT_API_KEY_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_API_KEY_ISSUER_ID }}
+        APP_STORE_CONNECT_API_KEY_KEY: ${{ secrets.APP_STORE_CONNECT_API_KEY_KEY }}
+        IDENTITY_P12: ${{ secrets.IDENTITY_P12 }}
+        DEVELOPMENT_TEAM: ${{ secrets.DEVELOPMENT_TEAM }}
+      run: |
+        make package
+    - name: Upload ipa
+      uses: actions/upload-artifact@v7
+      with:
+        name: swiftbharat26-adhoc
+        path: |
+          out/swiftbharat26.ipa
+          out/swiftbharat26.app.dSYM.zip
+    - name: Publish preview
+      uses: kabiroberai/deploy-adhoc-ipa@v1
+      with:
+        ipa: out/swiftbharat26.ipa
+        cloudflare-api-token: ${{ secrets.CLOUDFLARE_API_TOKEN }}
