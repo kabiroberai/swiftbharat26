@@ -1,8 +1,8 @@
 import SwiftUI
+import Dependencies
 
 struct GreetingsView: View {
     @State private var model = GreetingViewModel()
-    @Environment(\.greetingGenerator) var greetings
 
     var body: some View {
         Form {
@@ -15,7 +15,7 @@ struct GreetingsView: View {
         }
         .alert(isPresented: $model.isAlertPresented) {
             Alert(
-                title: Text(greetings.generateGreeting(for: model.name)),
+                title: Text(model.greeting),
                 dismissButton: .default(Text("Thanks")),
             ) 
         }
@@ -25,4 +25,9 @@ struct GreetingsView: View {
 @Observable final class GreetingViewModel {
     var name = ""
     var isAlertPresented = false
+
+    var greeting: String {
+        @Dependency(\.greetingGenerator) var gen
+        return gen.generateGreeting(for: name)
+    }
 }

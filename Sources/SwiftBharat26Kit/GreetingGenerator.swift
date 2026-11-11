@@ -1,6 +1,8 @@
 import SwiftUI
+import Dependencies
+import DependenciesMacros
 
-protocol GreetingGenerator {
+protocol GreetingGenerator: Sendable {
     func generateGreeting(for name: String) -> String
 }
 
@@ -10,11 +12,9 @@ struct GreetingGeneratorV1: GreetingGenerator {
     }
 }
 
-extension GreetingGenerator where Self == GreetingGeneratorV1 {
-    static var v1: Self { Self() }
-}
-
-extension EnvironmentValues {
-    @Entry var greetingGenerator: any GreetingGenerator
-        = .v1
+extension DependencyValues {
+    @DependencyEntry(
+        liveValue: GreetingGeneratorV1()
+    )
+    var greetingGenerator: any GreetingGenerator
 }
