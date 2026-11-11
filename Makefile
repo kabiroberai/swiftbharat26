@@ -9,7 +9,10 @@ generate:
 
 snapshots:
 	@rm -rf snapshot-images
-	SIMCTL_CHILD_SNAPSHOTS_EXPORT_DIR="$$PWD/snapshot-images" xtool dev -s
+	TEST_RUNNER_SNAPSHOTS_EXPORT_DIR="$$PWD/snapshot-images" \
+		xcodebuild test \
+			-scheme SwiftBharat26 \
+			-destination '$(or $(SIM_DEST),platform=iOS Simulator,name=iPhone 18 Pro)'
 
 e2e: build
 	@+$(MAKE) e2e-run

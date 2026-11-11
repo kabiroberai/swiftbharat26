@@ -33,21 +33,6 @@ jobs:
         SIM_UUID=$(xcrun simctl create TestSim "iPhone 17 Pro")
         echo "SIM_UUID=$SIM_UUID" >> $GITHUB_ENV
         xcrun simctl bootstatus "$SIM_UUID" -b
-    - name: Snapshot tests
-      run: |
-        echo "Installing app..."
-        xcrun simctl install "$SIM_UUID" ./xtool/swiftbharat26.app
-        echo "Capturing snapshots..."
-        SIMCTL_CHILD_SNAPSHOTS_EXPORT_DIR="$PWD/snapshot-images" xcrun simctl \
-          launch --terminate-running-process --console-pty "$SIM_UUID" com.kabiroberai.swiftbharat26
-    - name: Upload results
-      env:
-        SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
-        SENTRY_ORG: swiftbharat26-demo
-        SENTRY_PROJECT: swiftbharat26
-      run: |
-        brew install getsentry/tools/sentry-cli
-        sentry-cli snapshots upload ./snapshot-images --app-id swiftbharat26
     - name: End-to-end tests
       env:
         GITHUB_TOKEN: ${{ github.token }}
@@ -63,6 +48,29 @@ jobs:
         name: e2e-artifacts
         path: e2e/.e2e/results
         if-no-files-found: ignore
+  snapshot:
+    runs-on: xcode-27
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+    - uses: actions/checkout@v7
+    - name: Create simulator
+      run: |
+        SIM_UUID=$(xcrun simctl create TestSim "iPhone 17 Pro")
+        echo "SIM_UUID=$SIM_UUID" >> $GITHUB_ENV
+        xcrun simctl bootstatus "$SIM_UUID" -b
+    - name: Snapshot tests
+      run: |
+        make snapshots SIM_DEST=id=$SIM_UUID
+    - name: Upload results
+      env:
+        SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+        SENTRY_ORG: swiftbharat26-demo
+        SENTRY_PROJECT: swiftbharat26
+      run: |
+        brew install getsentry/tools/sentry-cli
+        sentry-cli snapshots upload ./snapshot-images --app-id swiftbharat26
   preview:
     runs-on: xcode-27
     permissions:
