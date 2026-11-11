@@ -50,5 +50,6 @@ lane :package do
     scheme: "swiftbharat26-App",
     export_method: "ad-hoc",
     output_directory: "./out",
+    xcargs: "-skipMacroValidation",
   )
 end
