@@ -1,0 +1,54 @@
+default_platform(:ios)
+
+ENV["FASTLANE_XCODEBUILD_SETTINGS_TIMEOUT"] = "120"
+
+lane :package do
+  # `sh` runs from ./fastlane, so hop up to the package root
+  sh("cd .. && xtool dev generate-xcode-project")
+
+  app_store_connect_api_key(
+    is_key_content_base64: true,
+  )
+
+  create_keychain(
+    name: "swiftbharat26.keychain",
+    password: "",
+    unlock: true,
+  )
+
+  unlock_keychain(
+    path: "swiftbharat26.keychain",
+    password: "",
+  )
+
+  Tempfile.create(["Identity", ".p12"]) do |file|
+    file.write(Base64.decode64(ENV["IDENTITY_P12"]))
+    file.close
+    import_certificate(
+      certificate_path: file.path,
+      keychain_name: "swiftbharat26.keychain",
+      keychain_password: "",
+    )
+  end
+
+  sigh(
+    platform: "ios",
+    output_path: "./out",
+    adhoc: true,
+  )
+
+  update_code_signing_settings(
+    path: "./xtool/.xtool-tmp/swiftbharat26.xcodeproj",
+    use_automatic_signing: false,
+    team_id: ENV["DEVELOPMENT_TEAM"],
+    code_sign_identity: "Apple Distribution",
+    profile_name: lane_context[SharedValues::SIGH_NAME],
+  )
+
+  gym(
+    workspace: "./xtool/swiftbharat26.xcworkspace",
+    scheme: "swiftbharat26-App",
+    export_method: "ad-hoc",
+    output_directory: "./out",
+  )
+end

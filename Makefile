@@ -16,3 +16,6 @@ e2e: build
 
 e2e-run:
 	npx --workspace=e2e -- e2e run
+
+package:
+	bundle exec fastlane package
