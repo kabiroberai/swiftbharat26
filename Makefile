@@ -11,7 +11,7 @@ snapshots:
 	@rm -rf snapshot-images
 	TEST_RUNNER_SNAPSHOTS_EXPORT_DIR="$$PWD/snapshot-images" \
 		xcodebuild test \
-			-scheme SwiftBharat26 \
+			-skipMacroValidation -scheme SwiftBharat26 \
 			-destination '$(or $(SIM_DEST),platform=iOS Simulator,name=iPhone 18 Pro)'
 
 e2e: build
