@@ -1,0 +1,20 @@
+name: 'Setup xtool'
+description: 'Download xtool and add it to PATH'
+inputs:
+  url:
+    description: 'URL of the xtool.app zip'
+    required: true
+runs:
+  using: composite
+  steps:
+    - name: Setup xtool
+      shell: bash
+      env:
+        XTOOL_URL: ${{ inputs.url }}
+      run: |
+        mkdir -p ~/xtool
+        curl -fSL "$XTOOL_URL" -o ~/xtool/xtool.app.zip
+        unzip -q ~/xtool/xtool.app.zip -d ~/xtool 'xtool.app/*'
+        rm -f ~/xtool/xtool.app.zip
+        ln -s ~/xtool/xtool.app/Contents/Resources/bin/xtool /usr/local/bin/xtool
+        xtool --version
