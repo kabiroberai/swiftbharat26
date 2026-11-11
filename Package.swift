@@ -3,15 +3,12 @@
 import PackageDescription
 
 let package = Package(
-    name: "swiftbharat26",
+    name: "SwiftBharat26Kit",
     platforms: [
         .iOS(.v27),
     ],
     products: [
-        .library(
-            name: "swiftbharat26",
-            targets: ["SwiftBharat26"]
-        ),
+        .library(name: "SwiftBharat26Kit", targets: ["SwiftBharat26Kit"]),
     ],
     dependencies: [
         .package(url: "https://github.com/apple/swift-openapi-generator", from: "1.6.0"),
@@ -25,24 +22,14 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "SwiftBharat26",
-            dependencies: [
-                "SwiftBharat26Kit",
-                .product(name: "SnapshottingTestsCore", package: "SnapshotPreviews"),
-            ]
-        ),
-        .target(
             name: "SwiftBharat26Kit",
             dependencies: [
                 .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime"),
                 .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
                 .product(name: "Dependencies", package: "swift-dependencies"),
                 .product(name: "DependenciesMacros", package: "swift-dependencies"),
+                .product(name: "SnapshottingTestsCore", package: "SnapshotPreviews"),
             ]
-        ),
-        .testTarget(
-            name: "SwiftBharat26Tests",
-            dependencies: ["SwiftBharat26Kit"],
         ),
     ]
 )
