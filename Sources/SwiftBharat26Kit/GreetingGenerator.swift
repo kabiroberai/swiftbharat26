@@ -3,10 +3,14 @@ import Dependencies
 import DependenciesMacros
 
 protocol GreetingGenerator: Sendable {
+    var buttonTitle: String { get }
+
     func generateGreeting(for name: String) -> String
 }
 
 struct GreetingGeneratorV1: GreetingGenerator {
+    var buttonTitle: String { "Greet" }
+
     func generateGreeting(for name: String) -> String {
         "Hello, \(name)!"
     }

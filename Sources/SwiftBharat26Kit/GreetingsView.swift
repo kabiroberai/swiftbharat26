@@ -8,7 +8,7 @@ struct GreetingsView: View {
         Form {
             TextField("Enter name…", text: $model.name)
 
-            Button("Greet") {
+            Button(model.greetButtonTitle) {
                 model.isAlertPresented = true
             }
             .disabled(model.name.isEmpty)
@@ -26,8 +26,14 @@ struct GreetingsView: View {
     var name = ""
     var isAlertPresented = false
 
+    @ObservationIgnored
+    @Dependency(\.greetingGenerator) var gen
+
+    var greetButtonTitle: String {
+        gen.buttonTitle
+    }
+
     var greeting: String {
-        @Dependency(\.greetingGenerator) var gen
         return gen.generateGreeting(for: name)
     }
 }
