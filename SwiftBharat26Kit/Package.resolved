@@ -1,5 +1,5 @@
 {
-  "originHash" : "80a61c05756b3cd01da85637d91efe4f9e82fbac839721adeb8651967307dde5",
+  "originHash" : "d6924a9f8dce2c5b0bf8cd361d536d97ef2d8aa694b86620d7aced1265f19aa9",
   "pins" : [
     {
       "identity" : "combine-schedulers",
@@ -8,15 +8,6 @@
       "state" : {
         "revision" : "114354e8c1667a2edc4993700fb9fa4f90157b56",
         "version" : "1.2.2"
-      }
-    },
-    {
-      "identity" : "flyingfox",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/swhitty/FlyingFox.git",
-      "state" : {
-        "revision" : "f7829d4aca8cbfecb410a1cce872b1b045224aa1",
-        "version" : "0.16.0"
       }
     },
     {
@@ -35,24 +26,6 @@
       "state" : {
         "revision" : "8576f0d579b27020beccbccc3ea6844f3ddfc2c2",
         "version" : "0.14.0"
-      }
-    },
-    {
-      "identity" : "simpledebugger",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/EmergeTools/SimpleDebugger.git",
-      "state" : {
-        "revision" : "f065263eb5db95874b690408d136b573c939db9e",
-        "version" : "1.0.0"
-      }
-    },
-    {
-      "identity" : "snapshotpreviews",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/getsentry/SnapshotPreviews",
-      "state" : {
-        "revision" : "e90a09906ef9d0d7fc29871202b4048cd360ee25",
-        "version" : "0.20.0"
       }
     },
     {
@@ -87,8 +60,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-collections",
       "state" : {
-        "revision" : "f96b909e1a9e469620bc5037c1e24e00153f376f",
-        "version" : "1.7.5"
+        "revision" : "88754449ab766a739610b660e117762115fabc9c",
+        "version" : "1.7.6"
       }
     },
     {

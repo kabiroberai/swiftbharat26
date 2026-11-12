@@ -5,7 +5,7 @@ watch:
 	xtool dev -w
 
 generate:
-	swift package plugin --allow-writing-to-package-directory generate-code-from-openapi
+	swift package --package-path SwiftBharat26Kit plugin --allow-writing-to-package-directory generate-code-from-openapi
 
 snapshots:
 	@rm -rf snapshot-images

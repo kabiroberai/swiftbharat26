@@ -26,7 +26,7 @@
 		26769B63CF682570C1EB7A36 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		5617185230A5244100C44BD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5617185730A52B5900C44BD4 /* SwiftBharat26Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftBharat26Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B4FAB32557C2CA12A4E8C328 /* swiftbharat26 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = swiftbharat26; path = .; sourceTree = SOURCE_ROOT; };
+		B4FAB32557C2CA12A4E8C328 /* SwiftBharat26Kit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SwiftBharat26Kit; sourceTree = "<group>"; };
 		C3F219E7975A19F52CFEF5B3 /* SwiftBharat26.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftBharat26.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -79,7 +79,7 @@
 		902C4C6FAE4A9ABAE45F27D7 = {
 			isa = PBXGroup;
 			children = (
-				B4FAB32557C2CA12A4E8C328 /* swiftbharat26 */,
+				B4FAB32557C2CA12A4E8C328 /* SwiftBharat26Kit */,
 				1DB7DE7141FC11B77C9DF04F /* SwiftBharat26 */,
 				5617185830A52B5900C44BD4 /* SwiftBharat26Tests */,
 				71459152CDB0CD7869A5DF37 /* Products */,
@@ -158,7 +158,7 @@
 			mainGroup = 902C4C6FAE4A9ABAE45F27D7;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				B2245B80E2EFAE3D2D4FF8CF /* XCLocalSwiftPackageReference "." */,
+				B2245B80E2EFAE3D2D4FF8CF /* XCLocalSwiftPackageReference "SwiftBharat26Kit" */,
 				5617186030A52B9100C44BD4 /* XCRemoteSwiftPackageReference "SnapshotPreviews" */,
 			);
 			preferredProjectObjectVersion = 77;
@@ -459,9 +459,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		B2245B80E2EFAE3D2D4FF8CF /* XCLocalSwiftPackageReference "." */ = {
+		B2245B80E2EFAE3D2D4FF8CF /* XCLocalSwiftPackageReference "SwiftBharat26Kit" */ = {
 			isa = XCLocalSwiftPackageReference;
-			relativePath = .;
+			relativePath = SwiftBharat26Kit;
 		};
 /* End XCLocalSwiftPackageReference section */
 
