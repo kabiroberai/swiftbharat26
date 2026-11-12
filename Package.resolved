@@ -1,5 +1,5 @@
 {
-  "originHash" : "f99d9fa472a0a78c6b9eace9251aa870a2c98967c307dd61f5d57595de1b8188",
+  "originHash" : "80a61c05756b3cd01da85637d91efe4f9e82fbac839721adeb8651967307dde5",
   "pins" : [
     {
       "identity" : "combine-schedulers",
@@ -49,10 +49,10 @@
     {
       "identity" : "snapshotpreviews",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/kabiroberai/SnapshotPreviews",
+      "location" : "https://github.com/getsentry/SnapshotPreviews",
       "state" : {
-        "branch" : "render-hooks",
-        "revision" : "f86a5be94ef976a79fd37b0497bfe09eb3e6e0c2"
+        "revision" : "e90a09906ef9d0d7fc29871202b4048cd360ee25",
+        "version" : "0.20.0"
       }
     },
     {

@@ -1,15 +1,10 @@
 import SwiftUI
-import SnapshottingTestsCore
 
 public struct ContentView: View {
     public init() {}
 
     public var body: some View {
-        if ProcessInfo.processInfo.environment["SNAPSHOTS_EXPORT_DIR"] == nil {
-            RootView()
-        } else {
-            SnapshotTestsView()
-        }
+        RootView()
     }
 }
 

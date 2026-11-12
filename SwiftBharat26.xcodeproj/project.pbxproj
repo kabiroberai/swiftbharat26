@@ -9,14 +9,34 @@
 /* Begin PBXBuildFile section */
 		1F2180249533BE3639F33EE8 /* SwiftBharat26Kit in Frameworks */ = {isa = PBXBuildFile; productRef = BF2A4CEA591AA932F5B6776C /* SwiftBharat26Kit */; };
 		3078BC69D15849AE682A2723 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26769B63CF682570C1EB7A36 /* App.swift */; };
+		5617186230A52B9100C44BD4 /* SnapshottingTests in Frameworks */ = {isa = PBXBuildFile; productRef = 5617186130A52B9100C44BD4 /* SnapshottingTests */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5617185B30A52B5900C44BD4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BADC13AEEFA0108812AA5E5D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1B152F0B42D274B42B22D74B;
+			remoteInfo = SwiftBharat26;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		26769B63CF682570C1EB7A36 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		5617185230A5244100C44BD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5617185730A52B5900C44BD4 /* SwiftBharat26Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftBharat26Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4FAB32557C2CA12A4E8C328 /* swiftbharat26 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = swiftbharat26; path = .; sourceTree = SOURCE_ROOT; };
 		C3F219E7975A19F52CFEF5B3 /* SwiftBharat26.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftBharat26.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		5617185830A52B5900C44BD4 /* SwiftBharat26Tests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = SwiftBharat26Tests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		1BCC8459141D808E4283E435 /* Frameworks */ = {
@@ -24,6 +44,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F2180249533BE3639F33EE8 /* SwiftBharat26Kit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5617185430A52B5900C44BD4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5617186230A52B9100C44BD4 /* SnapshottingTests in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				C3F219E7975A19F52CFEF5B3 /* SwiftBharat26.app */,
+				5617185730A52B5900C44BD4 /* SwiftBharat26Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -52,6 +81,7 @@
 			children = (
 				B4FAB32557C2CA12A4E8C328 /* swiftbharat26 */,
 				1DB7DE7141FC11B77C9DF04F /* SwiftBharat26 */,
+				5617185830A52B5900C44BD4 /* SwiftBharat26Tests */,
 				71459152CDB0CD7869A5DF37 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -78,6 +108,30 @@
 			productReference = C3F219E7975A19F52CFEF5B3 /* SwiftBharat26.app */;
 			productType = "com.apple.product-type.application";
 		};
+		5617185630A52B5900C44BD4 /* SwiftBharat26Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5617185D30A52B5900C44BD4 /* Build configuration list for PBXNativeTarget "SwiftBharat26Tests" */;
+			buildPhases = (
+				5617185330A52B5900C44BD4 /* Sources */,
+				5617185430A52B5900C44BD4 /* Frameworks */,
+				5617185530A52B5900C44BD4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5617185C30A52B5900C44BD4 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				5617185830A52B5900C44BD4 /* SwiftBharat26Tests */,
+			);
+			name = SwiftBharat26Tests;
+			packageProductDependencies = (
+				5617186130A52B9100C44BD4 /* SnapshottingTests */,
+			);
+			productName = SwiftBharat26Tests;
+			productReference = 5617185730A52B5900C44BD4 /* SwiftBharat26Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -85,8 +139,13 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
+				LastSwiftUpdateCheck = 2720;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					5617185630A52B5900C44BD4 = {
+						CreatedOnToolsVersion = 27.2;
+						TestTargetID = 1B152F0B42D274B42B22D74B;
+					};
 				};
 			};
 			buildConfigurationList = 7BC50F5E0ED05A6CD2E92A7C /* Build configuration list for PBXProject "SwiftBharat26" */;
@@ -100,6 +159,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				B2245B80E2EFAE3D2D4FF8CF /* XCLocalSwiftPackageReference "." */,
+				5617186030A52B9100C44BD4 /* XCRemoteSwiftPackageReference "SnapshotPreviews" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 71459152CDB0CD7869A5DF37 /* Products */;
@@ -107,9 +167,20 @@
 			projectRoot = "";
 			targets = (
 				1B152F0B42D274B42B22D74B /* SwiftBharat26 */,
+				5617185630A52B5900C44BD4 /* SwiftBharat26Tests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5617185530A52B5900C44BD4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		331815973E5A42C805DEA9E4 /* Sources */ = {
@@ -120,7 +191,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5617185330A52B5900C44BD4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5617185C30A52B5900C44BD4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1B152F0B42D274B42B22D74B /* SwiftBharat26 */;
+			targetProxy = 5617185B30A52B5900C44BD4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		199466A7C1A0D05BB82373B9 /* Release */ = {
@@ -162,6 +248,66 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
+		};
+		5617185E30A52B5900C44BD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 25MTNC334J;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kabiroberai.SwiftBharat26Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftBharat26.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SwiftBharat26";
+			};
+			name = Debug;
+		};
+		5617185F30A52B5900C44BD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 25MTNC334J;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kabiroberai.SwiftBharat26Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftBharat26.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SwiftBharat26";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
 		};
 		99E1F58CB5A6B9692B3B671E /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -283,6 +429,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5617185D30A52B5900C44BD4 /* Build configuration list for PBXNativeTarget "SwiftBharat26Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5617185E30A52B5900C44BD4 /* Debug */,
+				5617185F30A52B5900C44BD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
 		7BC50F5E0ED05A6CD2E92A7C /* Build configuration list for PBXProject "SwiftBharat26" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -310,7 +465,23 @@
 		};
 /* End XCLocalSwiftPackageReference section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		5617186030A52B9100C44BD4 /* XCRemoteSwiftPackageReference "SnapshotPreviews" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/getsentry/SnapshotPreviews";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 0.20.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
+		5617186130A52B9100C44BD4 /* SnapshottingTests */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5617186030A52B9100C44BD4 /* XCRemoteSwiftPackageReference "SnapshotPreviews" */;
+			productName = SnapshottingTests;
+		};
 		BF2A4CEA591AA932F5B6776C /* SwiftBharat26Kit */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = SwiftBharat26Kit;
