@@ -45,6 +45,6 @@ struct FactView: View {
     }
 }
 
-#Preview {
+#Preview("Facts tab") {
     FactView()
 }
