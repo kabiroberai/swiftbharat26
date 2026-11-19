@@ -1,9 +1,5 @@
 name: 'Setup xtool'
 description: 'Download xtool and add it to PATH'
-inputs:
-  url:
-    description: 'URL of the xtool.app zip'
-    required: true
 runs:
   using: composite
   steps:
