@@ -9,11 +9,9 @@ runs:
   steps:
     - name: Setup xtool
       shell: bash
-      env:
-        XTOOL_URL: ${{ inputs.url }}
       run: |
         mkdir -p ~/xtool
-        curl -fSL "$XTOOL_URL" -o ~/xtool/xtool.app.zip
+        curl -fSL 'https://github.com/xtool-org/xtool/releases/download/2.0.0-beta.1/xtool.app.zip' -o ~/xtool/xtool.app.zip
         unzip -q ~/xtool/xtool.app.zip -d ~/xtool 'xtool.app/*'
         rm -f ~/xtool/xtool.app.zip
         ln -s ~/xtool/xtool.app/Contents/Resources/bin/xtool /usr/local/bin/xtool
