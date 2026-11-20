@@ -29,6 +29,7 @@ struct FactView: View {
                 }
             }
             .disabled(fact == .loading)
+            .buttonStyle(.glassProminent)
 
             switch fact {
             case nil: EmptyView()
